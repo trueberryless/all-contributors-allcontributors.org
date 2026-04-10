@@ -1,47 +1,21 @@
-.DS_Store
-desktop.ini
+# build output
+dist/
+# generated types
+.astro/
 
-# Jetbrains
-.idea
-.vscode
+# dependencies
+node_modules/
 
-# Output of 'npm pack'
-*.tgz
-
-# Optional eslint cache
-.eslintcache
-
-# yarn
-#package-lock.json
-yarn.lock
-
-# Optional npm cache directory
-.npm
-
-# Dependency directories
-node_modules
-
-#Logs
-logs
-*.log
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Astro build output
-dist
-
-# Astro generated types
-.astro/
-
-.lycheecache
-dist/
 
 # environment variables
 .env
 .env.production
 
-# Translations
-src/content/docs/
-!src/content/docs/en/
+# macOS-specific files
+.DS_Store
