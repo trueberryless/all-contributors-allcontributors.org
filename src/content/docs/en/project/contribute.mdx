@@ -155,40 +155,134 @@ To build the docs locally:
 
 Refresh the browser page as needed when editing markdown pages.
 
-### Linting your contribution
+### Linting and formatting your contribution
 
-If you make changes to a markdown file in the site, then our linting action will
-check those changes. To run the linter yourself locally on the documentation before submitting a PR use:
+We use [Biome](https://biomejs.dev/) for linting and formatting files in the documentation project.
+Currently, Biome does not support formatting Markdown or MDX files. You can format or lint other file types though.
+
+There are several options to use Biome: You can lint, format, or lint and format, all three options either with automatic fixes or without.
+Use the following commands for your desired goal:
 
 <Tabs syncKey="pkg">
 <TabItem label="npm">
 
-```sh
-npm run lint
-```
+- **Lint**: Scans for code smells and best-practice violations.
+
+    ```sh
+    npm run lint
+    ```
+
+- **Lint & Fix**: Scans and automatically applies safe fixes to your code.
+
+    ```sh
+    npm run lint:fix
+    ```
+
+- **Format**: Checks if your code matches the defined style (indentation, etc.).
+
+    ```sh
+    npm run format
+    ```
+
+- **Format & Fix**: Automatically reformats all files to match the style guide.
+
+    ```sh
+    npm run format:fix
+    ```
+
+- **Check**: Runs linting, formatting, and import organization (read-only).
+
+    ```sh
+    npm run check
+    ```
+
+- **Check & Fix**: Runs linting, formatting, and import organization and writes changes.
+
+    ```sh
+    npm run check:fix
+    ```
 
 </TabItem>
 <TabItem label="pnpm">
 
-```sh
-pnpm lint
-```
+- **Lint**: Scans for code smells and best-practice violations.
+
+    ```sh
+    pnpm lint
+    ```
+
+- **Lint & Fix**: Scans and automatically applies safe fixes to your code.
+
+    ```sh
+    pnpm lint:fix
+    ```
+
+- **Format**: Checks if your code matches the defined style (indentation, etc.).
+
+    ```sh
+    pnpm format
+    ```
+
+- **Format & Fix**: Automatically reformats all files to match the style guide.
+
+    ```sh
+    pnpm format:fix
+    ```
+
+- **Check**: Runs linting, formatting, and import organization (read-only).
+
+    ```sh
+    pnpm check
+    ```
+
+- **Check & Fix**: Runs linting, formatting, and import organization and writes changes.
+
+    ```sh
+    pnpm check:fix
+    ```
 
 </TabItem>
 <TabItem label="Yarn">
 
-```sh
-yarn lint
-```
+
+- **Lint**: Scans for code smells and best-practice violations.
+
+    ```sh
+    yarn lint
+    ```
+
+- **Lint & Fix**: Scans and automatically applies safe fixes to your code.
+
+    ```sh
+    yarn lint:fix
+    ```
+
+- **Format**: Checks if your code matches the defined style (indentation, etc.).
+
+    ```sh
+    yarn format
+    ```
+
+- **Format & Fix**: Automatically reformats all files to match the style guide.
+
+    ```sh
+    yarn format:fix
+    ```
+
+- **Check**: Runs linting, formatting, and import organization (read-only).
+
+    ```sh
+    yarn check
+    ```
+
+- **Check & Fix**: Runs linting, formatting, and import organization and writes changes.
+
+    ```sh
+    yarn check:fix
+    ```
 
 </TabItem>
 </Tabs>
-
-You can also run it manually on specific files like this:
-
-```sh
-markdownlint --fix "src/content/docs/contribute.md"
-```
 
 ### Checking links
 
