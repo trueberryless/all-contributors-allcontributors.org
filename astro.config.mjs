@@ -5,7 +5,6 @@ import { defineConfig } from "astro/config";
 import { Locales } from "./configs/locales.config.ts";
 import { Plugins } from "./configs/plugins.config.ts";
 import { Sidebar } from "./configs/sidebar.config.ts";
-import { rehypeStepIds } from "./src/plugins/rehype-step-id";
 
 // https://astro.build/config
 export default defineConfig({
@@ -37,9 +36,6 @@ export default defineConfig({
       credits: true,
     }),
   ],
-  markdown: {
-    rehypePlugins: [rehypeStepIds],
-  },
   redirects: {
     "/": {
       status: 301,
